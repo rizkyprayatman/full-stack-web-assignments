@@ -144,7 +144,7 @@ cv.txt  portfolio.txt
 
 <!-- IMAGES -->
 
-[img-1]: https://drive.google.com/file/d/1wGtLPbJf38dSXns8iUuUX6jFu4ueykGQ/view?usp=sharing
-[img-2]: https://drive.google.com/file/d/1zSqIRvN1yKwqUcFCo3Yoyyv3r-tmUoT0/view?usp=sharing
-[img-3]: https://drive.google.com/file/d/1eS9-9ronrcqyeTsO7fBxM3OCZBQI9sYt/view?usp=sharing
-[img-4]: https://drive.google.com/file/d/1Mim8In2lbuW5szjAHVkLvwI_K07tlUFy/view?usp=sharing
+[img-1]: img/img-1.png
+[img-2]: img/img-1.png
+[img-3]: img/img-1.png
+[img-4]: img/img-1.png
