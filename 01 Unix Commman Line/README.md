@@ -135,10 +135,12 @@ cv.txt  portfolio.txt
 
 ## Lampiran 2
 
-[img-1]
-[img-2]
-[img-3]
-[img-4]
+[![img-1]]
+[![img-2]]
+[![img-3]]
+[![img-4]]
+
+# Terima Kasih
 
 <!-- IMAGES -->
 
