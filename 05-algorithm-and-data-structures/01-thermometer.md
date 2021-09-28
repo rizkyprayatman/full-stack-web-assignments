@@ -16,9 +16,9 @@ INPUT n
 INPUT T
 
 if T = "Fahrenheit" then
-    result = (T - 32)*(5/9)
+    result = (n - 32)*(5/9)
 else if T = "Kelvin" then
-    result = T - 273.15
+    result = n - 273.15
 else
     result = n
 end if
