@@ -34,7 +34,8 @@ function user(){
 /// WRITE YOUR ANALYSIS HERE
 /*
 - yang akan ditampilkan dalam console.log ialah "Meriah"
-  Hal ini karena variabel name telah di dekralasikan dalam console.log dari function printFirstName,
+  Hal ini karena variabel name telah di dekralasikan dalam console.log dari function printFirstName 
+  (yang di console.log ialah dari function printFistName),
   dan mengapa hanya mencetak Meriah, Karena name Meriah Carey telah di split menjadi bentuk array berikut [ 'Mariah', 'Carey' ]
   dan function mereturn name yang telah di split dan hanya mengembalikan index array ke 0
 
