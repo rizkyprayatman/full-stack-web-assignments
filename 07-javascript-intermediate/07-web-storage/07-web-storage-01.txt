@@ -4,3 +4,19 @@ Kamu diminta untuk melakukan analisa sederhana terhadap beberapa masalah dan tul
 1. Apa itu localStorage?
 2. Apa itu cookies?
 3. Apa perbedaan antara localStorage dan sessionStorage?
+
+1. Local Storage adalah tempat penyimpanan data di browser yang 
+tidak memiliki tanggal kadaluwarsa namun kapasitas penyimpanannya
+maksimum hanya sebesar 5 MB, kapasitas sebesar itu tidak akan membebani
+performa browser.
+
+2. Cookies adalah kumpulan data yang diterima komputer dari situs dan mengirimkan
+kembali ke situs yang dikunjungi, biasanya untuk menyimpan informasi login
+menyimpan pengaturan web.
+
+3. Perbedaan antara localStorage dan sessionStorage adalah :
+- localStorage, tidak memiliki kadaluwarsa, data tetap ada walaupun browser
+ditutup, data dapat dihapus.
+- sessionStorage, memiliki kadaluwarsa dimana hanya berlaku satu sesi dalam
+halaman web, data akan tersimpan selama browser terbuka, data akan hilang 
+ketika sesi berakhir.
