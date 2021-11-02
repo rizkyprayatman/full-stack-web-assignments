@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+## Expected Result
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://shopping-cart-017.netlify.app/
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+> Gunakan _template project_ yang berada pada respository https://github.com/impactbyte/shopping-cart untuk menjawab pertanyaan-pertanyaan di bawah. Ada beberapa peraturan yang harus kalian patuhi yaitu:
+>
+> - dilarang untuk mengubah nama dari variable yang ada
+> - dilarang untuk menghapus komentar
 
-### `yarn start`
+## Specs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Kita akan membuat website grocery shop menggunakan React,js dan React Redux. State management akan digunakan untuk memanage data Cart product yang dipesan, total harga, dan additional shipping.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Aplikasi harus memiliki fitur berikut ini:
 
-### `yarn test`
+**Home Page**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add to cart: Ketika user klik product, maka akan menambah 1 unique quantity product pada icon cart (bukan total seluruhya tetapi total unik per product. Misalnya user klik 3x pada card product yang sama, tampilan pada cart tetap 1).
 
-### `yarn build`
+**Checkout Page**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Menampilkan total quantity yang dimasukkan ke dalam cart
+- Dapat menambah dan mengurangi quantity item
+- Dapat memilih menggunakan additional shipping atau tidak (OPTIONAL)
+- Dapat menghapus masing-masing item
+- Menampilkan total pembayaran
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Store
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pada template, `store` sudah disediakan dan sudah dipanggil pada `index.js`.
 
-### `yarn eject`
+### Action
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Agar susunan kode lebih rapih. Kita membuat `action` kedalam 2 file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- File pertama `cartActions.js` berada di dalam folder `action-types` yang berisi list `action` pada aplikasi. Kita menggunakan `const` untuk menghindari duplikasi dan typo saat menggunakan `action`.
+- File kedua `cartActions.js` berada di dalam folder `actions` yang berisi logic dari `action` yang ingin kita buat.
+- **Buatlah** logic pada setiap `action` yang sudah di sediakan
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Reducer
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`reducer` berada di dalam folder `reducers` yaitu `cartReducer.js`.
+**Buatlah** beberapa logic untuk `reducer` agar dapat menghandle `action` dengan `type` :
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `ADD_TO_CART` = Menambahkan item ke dalam cart
+- `REMOVE_ITEM` = Menghapus quantity item pada halaman checkout
+- `ADD_QUANTITY` = Menambah quantity item
+- `SUB_QUANTITY` = Mengurangi quantity item
+- `ADD_SHIPPING` = Menambah biaya shipping (OPTIONAL)
+- `SUB_SHIPPING` = Mengurangi biaya shipping (OPTIONAL)
