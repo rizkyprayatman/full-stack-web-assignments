@@ -1,39 +1,41 @@
-import React from 'react';
-import { createContext, useContext, useReducer } from 'react';
+import React from "react";
+import { createContext, useContext, useReducer } from "react";
 
 const CountContext = createContext();
 
 const countReducer = (state, action) => {
   switch (action.type) {
-    case 'increment': {
-      // code here
+    case "increment": {
+      return { count: state.count + 1 };
     }
-    case 'decrement': {
-      // code here
+    case "decrement": {
+      return { count: state.count - 1 };
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`)
+      throw new Error(`Unhandled action type: ${action.type}`);
     }
   }
-}
+};
 
 const CountProvider = ({ children }) => {
   // useReducer
-
+  const [state, dispatch] = useReducer(countReducer, { count: 0 });
   // Make variable `value` and assign state & dispatch
-
-  return <CountContext.Provider>{children}</CountContext.Provider>
-}
+  const value = { state, dispatch };
+  return (
+    <CountContext.Provider value={value}>{children}</CountContext.Provider>
+  );
+};
 
 const useCount = () => {
   // fill the default value of useContext
-  const context = useContext();
+  const context = useContext(CountContext);
 
-  if (context === 'undefined') {
-    throw new Error('useCount must be used within a CountProvider')
+  if (context === "undefined") {
+    throw new Error("useCount must be used within a CountProvider");
   }
 
   return context;
-}
+};
 
-export { CountProvider, useCount } 
+export { CountProvider, useCount };
