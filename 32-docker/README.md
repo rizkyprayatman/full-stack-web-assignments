@@ -1,6 +1,6 @@
 # Docker
 
-## Soal 1
+## Soal
 
 ### 1. Jelaskan apa yang dimaksud dengan container pada docker !
 
